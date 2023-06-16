@@ -1,0 +1,34 @@
+html {
+    font-size: 62.5%;
+
+    @include respond(big-disktop){
+      font-size: 75%;
+    }
+    @include respond(land-tab){
+      font-size: 56.25%;
+    }
+    @include respond(port-tab){
+      font-size: 50%;
+    }
+  }
+  *,
+  *::after,
+  *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+  
+  body{
+    box-sizing: border-box;
+    padding: 3rem;
+
+    @include respond(port-tab){
+      padding: 0;
+    }
+  }
+
+  ::selection{
+    background-color: $color-primary;
+    color: $color-white;
+  }
